@@ -1,0 +1,42 @@
+.input {
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all .3s;
+    &:focus {
+      border-color: #40a9ff;
+      border-right-width: 1px !important;
+      outline: 0;
+      box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+    }
+    &:hover {
+      border-color: #40a9ff;
+      border-right-width: 1px !important;
+    }
+}
+
+.input-lg {
+  @include input-style($input-padding-y-lg, $input-padding-x-lg, $input-font-size-lg)
+}
+
+.input-default {
+  @include input-style($input-padding-y, $input-padding-x, $input-font-size)
+}
+
+.input-sm {
+  @include input-style($input-padding-y-sm, $input-padding-x-sm, $input-font-size-sm)
+}

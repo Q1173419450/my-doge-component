@@ -1,0 +1,71 @@
+.alert {
+  box-sizing: border-box;
+  margin: 0;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  word-wrap: break-word;
+  border-radius: 2px;
+}
+
+.alert-success{
+  @include alert-style($alert-background-success, $success)
+}
+
+.alert-info{
+  @include alert-style($alert-background-info, $info)
+}
+
+.alert-warning{
+  @include alert-style($alert-background-warning, $warning)
+}
+
+.alert-error{
+  @include alert-style($alert-background-danger, $danger)
+}
+
+.alert-icon {
+  margin-right: 8px;
+}
+
+.alert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-message {
+  color: rgba(0,0,0,.85);
+}
+
+.alert-description {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.alert-close-icon {
+  margin-left: 8px;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+  }
+  &:focus, &.focus {
+    outline: none; // 点击时的样式
+  }
+  &:active {
+    outline: none;
+  }
+}
